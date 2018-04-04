@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="forms">
+    <file alias="MainWindow.ui">forms/MainWindow.ui</file>
+  </qresource>
+  <qresource prefix="images">
+    <file alias="media-playback-start.png">images/media-playback-start.png</file>
+    <file alias="document-new.png">images/document-new.png</file>
+    <file alias="document-open.png">images/document-open.png</file>
+    <file alias="document-save-as.png">images/document-save-as.png</file>
+    <file alias="document-save.png">images/document-save.png</file>
+    <file alias="edit-copy.png">images/edit-copy.png</file>
+    <file alias="edit-cut.png">images/edit-cut.png</file>
+    <file alias="edit-delete.png">images/edit-delete.png</file>
+    <file alias="edit-paste.png">images/edit-paste.png</file>
+    <file alias="edit-redo.png">images/edit-redo.png</file>
+    <file alias="edit-select-all.png">images/edit-select-all.png</file>
+    <file alias="edit-undo.png">images/edit-undo.png</file>
+  </qresource>
+</RCC>
