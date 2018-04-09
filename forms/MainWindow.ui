@@ -161,7 +161,7 @@ p, li { white-space: pre-wrap; }
   </widget>
   <action name="action_file_new">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/document-new.png</normaloff>:/images/document-new.png</iconset>
    </property>
    <property name="text">
@@ -173,7 +173,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_file_open">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/document-open.png</normaloff>:/images/document-open.png</iconset>
    </property>
    <property name="text">
@@ -185,7 +185,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_file_save">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/document-save.png</normaloff>:/images/document-save.png</iconset>
    </property>
    <property name="text">
@@ -197,7 +197,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_file_save_as">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/document-save-as.png</normaloff>:/images/document-save-as.png</iconset>
    </property>
    <property name="text">
@@ -230,7 +230,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_edit_undo">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/edit-undo.png</normaloff>:/images/edit-undo.png</iconset>
    </property>
    <property name="text">
@@ -242,7 +242,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_edit_redo">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/edit-redo.png</normaloff>:/images/edit-redo.png</iconset>
    </property>
    <property name="text">
@@ -254,7 +254,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_edit_cut">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/edit-cut.png</normaloff>:/images/edit-cut.png</iconset>
    </property>
    <property name="text">
@@ -266,7 +266,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_edit_copy">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/edit-copy.png</normaloff>:/images/edit-copy.png</iconset>
    </property>
    <property name="text">
@@ -278,7 +278,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_edit_paste">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/edit-paste.png</normaloff>:/images/edit-paste.png</iconset>
    </property>
    <property name="text">
@@ -290,7 +290,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_edit_delete">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/edit-delete.png</normaloff>:/images/edit-delete.png</iconset>
    </property>
    <property name="text">
@@ -302,7 +302,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_edit_select_all">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/edit-select-all.png</normaloff>:/images/edit-select-all.png</iconset>
    </property>
    <property name="text">
@@ -314,7 +314,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_run">
    <property name="icon">
-    <iconset resource="../turtle.qrc">
+    <iconset resource="../zelva.qrc">
      <normaloff>:/images/media-playback-start.png</normaloff>:/images/media-playback-start.png</iconset>
    </property>
    <property name="text">
@@ -326,7 +326,7 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <resources>
-  <include location="../turtle.qrc"/>
+  <include location="../zelva.qrc"/>
  </resources>
  <connections/>
 </ui>

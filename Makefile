@@ -1,12 +1,12 @@
-all: turtle turtle.rcc
+all: zelva zelva.rcc
 
 clean:
-	rm -f turtle turtle.rcc *.hi *.o *~
+	rm -f zelva zelva.rcc *.hi *.o *~
 
-turtle: EditorWidget.hs Main.hs MainWindow.hs RenderWidget.hs Turtle.hs
-	env PATH=/usr/local/share/Qt/bin:$(PATH):/usr/local/share/ghc/bin ghc --make Main -package qt -fglasgow-exts -O2 -i. -o turtle
+zelva: EditorWidget.hs Main.hs MainWindow.hs RenderWidget.hs Turtle.hs
+	env PATH=/usr/local/share/Qt/bin:$(PATH):/usr/local/share/ghc/bin ghc --make Main -package qt -fglasgow-exts -O2 -i. -o zelva
 
-turtle.rcc: turtle.qrc forms/MainWindow.ui
-	env PATH=/usr/local/share/Qt/bin:$(PATH) rcc -binary -o turtle.rcc turtle.qrc
+zelva.rcc: zelva.qrc forms/MainWindow.ui
+	env PATH=/usr/local/share/Qt/bin:$(PATH) rcc -binary -o zelva.rcc zelva.qrc
 
 .PHONY: all clean

@@ -25,7 +25,7 @@ main :: IO Int
 main = do
     qApplication ()
 
-    foo <- registerResource "turtle.rcc"
+    foo <- registerResource "zelva.rcc"
 
     window <- mainWindow
     qshow window ()
