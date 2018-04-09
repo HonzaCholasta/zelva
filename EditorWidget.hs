@@ -71,7 +71,7 @@ editorWidget_fileName :: EditorWidget -> IO (String)
 editorWidget_fileName this = do
     --filename <- qVariantValue_QStringList =<< qObjectProperty this "filename"
     --return (head filename)
-    return "Soubor"
+    return "File"
 
 editorWidget_baseName :: EditorWidget -> IO (String)
 editorWidget_baseName this = do
@@ -87,7 +87,7 @@ editorWidget_title :: EditorWidget -> IO (String)
 editorWidget_title this = do
     filename <- editorWidget_baseName this
     modified <- editorWidget_isModified this
-    return ((if (filename /= "") then filename else "Nový") ++ (if modified then "*" else ""))
+    return ((if (filename /= "") then filename else "New") ++ (if modified then "*" else ""))
 
 editorWidget_text :: EditorWidget -> IO (String)
 editorWidget_text this = do
@@ -104,7 +104,7 @@ editorWidget_loadDocument this filename = do
 
     --qObjectSetProperty this "filename" =<< qVariant [filename]
     qObjectSetProperty this "modified" =<< qVariant False
-    emitSignal this "titleChanged()" () -- FIXME: signal nedorazi
+    emitSignal this "titleChanged()" () -- FIXME: signal not received
 
     close file ()
     return ()
@@ -115,11 +115,11 @@ editorWidget_saveDocument this filename = do
     open file fWriteOnly
 
     text <- editorWidget_text this
-    write file text -- FIXME: nezapise nic
+    write file text -- FIXME: does not write anything
 
     --qObjectSetProperty this "filename" =<< qVariant [filename]
     qObjectSetProperty this "modified" =<< qVariant False
-    emitSignal this "titleChanged()" () -- FIXME: signal nedorazi
+    emitSignal this "titleChanged()" () -- FIXME: signal not received
 
     close file ()
     return ()

@@ -53,7 +53,7 @@ mainWindow = do
     close file ()
 
     this <- qSubClass $ qCast_QMainWindow ui
-    --setHandler this "closeEvent(QCloseEvent*)" $ mainWindow_closeEvent -- FIXME: pada
+    --setHandler this "closeEvent(QCloseEvent*)" $ mainWindow_closeEvent -- FIXME: crashes
 
     viewDock <- qCast_QDockWidget =<< findChild this ("<QDockWidget*>", "viewDock")
     actionToggleViewDock <- toggleViewAction viewDock ()
@@ -61,9 +61,9 @@ mainWindow = do
     messagesDock <- qCast_QDockWidget =<< findChild this ("<QDockWidget*>", "messagesDock")
     actionToggleMessagesDock <- toggleViewAction messagesDock ()
 
-    menuZobrazit <- qCast_QMenu =<< findChild this ("<QMenu*>", "menu_Zobrazit")
-    addAction menuZobrazit actionToggleViewDock
-    addAction menuZobrazit actionToggleMessagesDock
+    menuView <- qCast_QMenu =<< findChild this ("<QMenu*>", "menu_view")
+    addAction menuView actionToggleViewDock
+    addAction menuView actionToggleMessagesDock
 
     view <- renderWidget viewDock Nothing
     setWidget viewDock (view)
@@ -138,7 +138,7 @@ mainWindow_onFileNew this = do
 
 mainWindow_onFileOpen :: MainWindow -> IO ()
 mainWindow_onFileOpen this = do
-    filename <- qFileDialogGetOpenFileName (this, "Otevřít soubor", ".", "Soubory LParseru (*.ls);;Všechny soubory (*)")
+    filename <- qFileDialogGetOpenFileName (this, "Open file", ".", "LParser files (*.ls);;All files (*)")
     if (length filename) > 0
         then do
             tabs <- qCast_QTabWidget =<< findChild this ("<QTabWidget*>", "tabWidget")
@@ -253,7 +253,7 @@ mainWindow_onRun this = do
                 then renderWidget_update view result
                 else return ()
 
-            mainWindow_message this $ "Výstup: " ++ (show result)
+            mainWindow_message this $ "Output: " ++ (show result)
             return ()
         else return ()
 
@@ -279,7 +279,7 @@ mainWindow_saveTab this num ask = do
 
     if (oldname == "" || ask)
         then do
-            filename <- qFileDialogGetSaveFileName (this, "Uložit soubor", ".", "Soubory LParseru (*.ls);;Všechny soubory (*)")
+            filename <- qFileDialogGetSaveFileName (this, "Save file", ".", "LParser files (*.ls);;All files (*)")
             if (length filename) > 0
                 then editorWidget_saveDocument editor filename
                 else return ()
@@ -299,7 +299,7 @@ mainWindow_closeTab this num = do
     if modified
         then do
             filename <- editorWidget_baseName editor
-            answer <- qMessageBoxQuestion (this, "Uložit soubor?", "Soubor " ++ filename ++ " byl změněn. Přejete si jej uložit?", (fYes+fNo+fCancel) :: QMessageBoxStandardButtons) :: IO QMessageBoxStandardButton
+            answer <- qMessageBoxQuestion (this, "Save file?", "File " ++ filename ++ " was changed. Do you want to save it?", (fYes+fNo+fCancel) :: QMessageBoxStandardButtons) :: IO QMessageBoxStandardButton
             if (answer == eYes)
                 then mainWindow_saveTab this num True
                 else return ()

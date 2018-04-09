@@ -47,7 +47,7 @@
    </property>
    <widget class="QMenu" name="menu_file">
     <property name="title">
-     <string>&amp;Soubor</string>
+     <string>&amp;File</string>
     </property>
     <addaction name="action_file_new"/>
     <addaction name="action_file_open"/>
@@ -60,9 +60,9 @@
     <addaction name="separator"/>
     <addaction name="action_file_quit"/>
    </widget>
-   <widget class="QMenu" name="menu_Upravit">
+   <widget class="QMenu" name="menu_edit">
     <property name="title">
-     <string>&amp;Upravit</string>
+     <string>&amp;Edit</string>
     </property>
     <addaction name="action_edit_undo"/>
     <addaction name="action_edit_redo"/>
@@ -73,21 +73,21 @@
     <addaction name="action_edit_delete"/>
     <addaction name="action_edit_select_all"/>
    </widget>
-   <widget class="QMenu" name="menu_Program">
+   <widget class="QMenu" name="menu_program">
     <property name="title">
      <string>&amp;Program</string>
     </property>
     <addaction name="action_run"/>
    </widget>
-   <widget class="QMenu" name="menu_Zobrazit">
+   <widget class="QMenu" name="menu_view">
     <property name="title">
-     <string>&amp;Zobrazit</string>
+     <string>&amp;View</string>
     </property>
    </widget>
    <addaction name="menu_file"/>
-   <addaction name="menu_Upravit"/>
-   <addaction name="menu_Zobrazit"/>
-   <addaction name="menu_Program"/>
+   <addaction name="menu_edit"/>
+   <addaction name="menu_view"/>
+   <addaction name="menu_program"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolbar">
@@ -117,7 +117,7 @@
     <set>QDockWidget::AllDockWidgetFeatures</set>
    </property>
    <property name="windowTitle">
-    <string>Zprávy</string>
+    <string>Messages</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>8</number>
@@ -152,7 +152,7 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </property>
    <property name="windowTitle">
-    <string>Výstup</string>
+    <string>Output</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>2</number>
@@ -165,7 +165,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/document-new.png</normaloff>:/images/document-new.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Nový</string>
+    <string>&amp;New</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
@@ -177,7 +177,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/document-open.png</normaloff>:/images/document-open.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Otevřít...</string>
+    <string>&amp;Open...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
@@ -189,7 +189,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/document-save.png</normaloff>:/images/document-save.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Uložit</string>
+    <string>&amp;Save</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
@@ -201,12 +201,12 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/document-save-as.png</normaloff>:/images/document-save-as.png</iconset>
    </property>
    <property name="text">
-    <string>Uložit j&amp;ako...</string>
+    <string>Save &amp;as...</string>
    </property>
   </action>
   <action name="action_file_save_all">
    <property name="text">
-    <string>Uložit &amp;vše</string>
+    <string>Save a&amp;ll</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+S</string>
@@ -214,7 +214,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_file_close">
    <property name="text">
-    <string>&amp;Zavřít</string>
+    <string>&amp;Close</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+W</string>
@@ -222,7 +222,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_file_quit">
    <property name="text">
-    <string>U&amp;končit</string>
+    <string>&amp;Quit</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -234,7 +234,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/edit-undo.png</normaloff>:/images/edit-undo.png</iconset>
    </property>
    <property name="text">
-    <string>Zpět</string>
+    <string>&amp;Undo</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Z</string>
@@ -246,7 +246,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/edit-redo.png</normaloff>:/images/edit-redo.png</iconset>
    </property>
    <property name="text">
-    <string>Vpřed</string>
+    <string>&amp;Redo</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+Z</string>
@@ -258,7 +258,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/edit-cut.png</normaloff>:/images/edit-cut.png</iconset>
    </property>
    <property name="text">
-    <string>Vyjmout</string>
+    <string>Cu&amp;t</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+X</string>
@@ -270,7 +270,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/edit-copy.png</normaloff>:/images/edit-copy.png</iconset>
    </property>
    <property name="text">
-    <string>Kopírovat</string>
+    <string>&amp;Copy</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+C</string>
@@ -282,7 +282,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/edit-paste.png</normaloff>:/images/edit-paste.png</iconset>
    </property>
    <property name="text">
-    <string>Vložit</string>
+    <string>&amp;Paste</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+V</string>
@@ -294,7 +294,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/edit-delete.png</normaloff>:/images/edit-delete.png</iconset>
    </property>
    <property name="text">
-    <string>Odstranit</string>
+    <string>&amp;Delete</string>
    </property>
    <property name="shortcut">
     <string>Del</string>
@@ -306,7 +306,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/edit-select-all.png</normaloff>:/images/edit-select-all.png</iconset>
    </property>
    <property name="text">
-    <string>Vybrat vše</string>
+    <string>Select &amp;all</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+A</string>
@@ -318,7 +318,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/media-playback-start.png</normaloff>:/images/media-playback-start.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Vykreslit</string>
+    <string>&amp;Run</string>
    </property>
    <property name="shortcut">
     <string>F5</string>
